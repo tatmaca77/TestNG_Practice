@@ -57,14 +57,10 @@ public class C03_SoftAssert extends TestBase {
         /// Sonuc yazısının "Nutella" icerdigini test edin
         softAssert.assertTrue(resultText.getText().contains("Nutella"),"Sonuc yazisi Nutella icermiyor...");
 
-/*
+
         // Sarelle iceriyor mu dogrula
         softAssert.assertTrue(resultText.getText().contains("Sarelle"),"Sonuc yazisi Sarelle icermiyor..." +
                 resultText.getText());
-
- */
-
-
 
 
         softAssert.assertAll();
@@ -73,7 +69,6 @@ public class C03_SoftAssert extends TestBase {
            assertAll(); tüm hatalari listelemesini istemeliyiz. Eger kullanmazsak sonunda bunu hata vermez.
          */
 
-        /** test islemlerini softAssert ile yapınız ve hatalar icin mesaj versin */
 
         System.out.println("tolga");
 
@@ -94,6 +89,10 @@ public class C03_SoftAssert extends TestBase {
         TestNG'de ; hem Assert, hem de SoftAssert yapilari vardir.
 
         Test sonuna kadar calissin, testin sonunda tüm hatalari listelesin mesaj versin istiyorsak SoftAssert kullaniriz.
+
+        SoftAssert'un hata bulsa bile calismaya devam etme özelligi  softAssert.assertAll();'a kadardir.
+
+        Eger  softAssert.assertAll()'da hata bulunursa calisma durur ve Class'in kalan kismi calismaz.
 
          */
 
