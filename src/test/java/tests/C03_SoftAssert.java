@@ -57,10 +57,12 @@ public class C03_SoftAssert extends TestBase {
         /// Sonuc yazısının "Nutella" icerdigini test edin
         softAssert.assertTrue(resultText.getText().contains("Nutella"),"Sonuc yazisi Nutella icermiyor...");
 
-
+/*
         // Sarelle iceriyor mu dogrula
         softAssert.assertTrue(resultText.getText().contains("Sarelle"),"Sonuc yazisi Sarelle icermiyor..." +
                 resultText.getText());
+
+ */
 
 
 
@@ -73,6 +75,27 @@ public class C03_SoftAssert extends TestBase {
 
         /** test islemlerini softAssert ile yapınız ve hatalar icin mesaj versin */
 
+        System.out.println("tolga");
+
+        /**
+        Hata ile karsilastigi icin assertAll(); dan sonraki kodlari görmez yani calistirmaz.
+        Sout islemini konsolda yazdirmaz.
+
+        Ama eger yukaridaki kodlarda hata olmasaydi hersey normal olsaydi bu sefer kendisinden sonraki kodlari
+        görür yani calistirir.
+        Sout islemini yapar konsola Tolga yazardi.
+         */
+
+
+        /*
+        Junit'de assert kullandigimizda Assert Failed oldugu anda test calistirmayi durduruyordu ve geri kalan kodlari
+        calistirmiyordu.
+
+        TestNG'de ; hem Assert, hem de SoftAssert yapilari vardir.
+
+        Test sonuna kadar calissin, testin sonunda tüm hatalari listelesin mesaj versin istiyorsak SoftAssert kullaniriz.
+
+         */
 
     }
 }
