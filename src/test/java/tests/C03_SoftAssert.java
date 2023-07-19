@@ -30,7 +30,7 @@ public class C03_SoftAssert extends TestBase {
         /// Title'in "Amazon" icerdigini test edin
         SoftAssert softAssert = new SoftAssert();
         String amazonTitle = driver.getTitle();
-        softAssert.assertTrue(amazonTitle.contains("Amazon"),"Title Amazon icermiyor...");
+        softAssert.assertTrue(amazonTitle.contains("RAmazon1"),"Title Amazon icermiyor...");
 
         /**
         SoftAssert Objesi olusturmaliyiz. Cünkü SoftAssert static degildir, instance'dir.
@@ -61,6 +61,8 @@ public class C03_SoftAssert extends TestBase {
         // Sarelle iceriyor mu dogrula
         softAssert.assertTrue(resultText.getText().contains("Sarelle"),"Sonuc yazisi Sarelle icermiyor..." +
                 resultText.getText());
+
+
 
 
         softAssert.assertAll();
