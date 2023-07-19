@@ -45,7 +45,7 @@ public class C02_DependsOnMethod  {
     public void test01() {
         driver.get("https://amazon.com/");
 
-    }
+    }                               // Eger test01 de bir hata yaparsak bagli oldugu test ignore olur ona bagli olanda ignore olur.
 
     @Test (dependsOnMethods = "test01")
     public void test02() {
