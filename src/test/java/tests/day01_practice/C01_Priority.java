@@ -1,4 +1,4 @@
-package tests;
+package tests.day01_practice;
 
 import org.testng.annotations.Test;
 import utilities.TestBase;
