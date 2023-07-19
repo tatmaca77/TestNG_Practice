@@ -52,6 +52,9 @@ public class C02_DependsOnMethod  {
         WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
         searchBox.sendKeys("Nutella" + Keys.ENTER);
     }
+    /**
+    Sadece test02'yi calistirinca otomatik olarak bagli oldugu test01'de calismis oluyor.
+     */
 
     @Test(dependsOnMethods = "test02")
     public void test03() {
@@ -59,5 +62,10 @@ public class C02_DependsOnMethod  {
         Assert.assertTrue(resultText.getText().contains("Nutella"));
 
     }
+    /**
+    DependsOnMethod = test methodlarinin calisma sirasina karismaz.
+    Sadece bagli olan test baglandigi test'in sonucuna bakar.
+    Eger baglandigi test passed olmazsa, baglanan test hic calismaz kendisini Ignore eder.
+    */
 
 }
