@@ -5,26 +5,27 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
-    /**  configuration.properties icindeki verileri cekebilmemiz okuyabilmemiz icin ConfigReader olusturduk. "fis"
-     .properties uzantılı dosyaya erişebilmemiz için Properties class'ından obje oluşturmamız gerekir.
-     bu oluşturduğumuz obje ile akışa aldığımız dosya yolunu load(fis) methodu ile properties dosyasındaki
-     key değerini return edebiliriz.
-     Bunu yapmak icin parametreli bir method olustururuz ve girdigimiz key'in degerini bize döndürür.
-     */
 
-    static Properties properties;
+
+    public static Properties properties;
+
     static {
+        String dosyayolu="Configrations.properties";
+        properties=new Properties();
         try {
-            FileInputStream fis = new FileInputStream("configuration.properties");
-            properties = new Properties();
-            properties.load(fis); // --> fis 'in okudugu bilgileri properties'e yükler.
+            FileInputStream fis=new FileInputStream(dosyayolu);
+            properties.load(fis);
+
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
+
     }
 
-    public static String getProperty (String key) {
 
-        return properties.getProperty(key); // --> String olarak girdigim key'in degerini return eder.
+    public static String getProperty(String key){
+
+        return properties.getProperty(key);
     }
+
 }
