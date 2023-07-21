@@ -27,12 +27,18 @@ public class C01_PageClassKullanimi {
     public void test01() throws IOException {
         // amazon sayfasına gidin
         Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
+
+
         // dropdown'dan "Computers" optionunu secin
         AmazonPage amazonPage = new AmazonPage();
         Select select = new Select(amazonPage.ddm);
         select.selectByVisibleText("Computers");
+
+
         // arama motoruna "Asus" yazıp aratın
         amazonPage.aramaKutusu.sendKeys("Asus" + Keys.ENTER);
+
+
         // ikinci urunun fotografını cekin
         LocalDateTime date = LocalDateTime.now();
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("YYMMddHHmmss");
@@ -40,11 +46,17 @@ public class C01_PageClassKullanimi {
         File kayit = new File("target/ekranGoruntusu/kayit"+tarih+".Jpeg");
         File gecici = amazonPage.ikinciUrun.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(gecici,kayit);
+
+
         // ikinci urune tıklayın
         amazonPage.ikinciUrun.click();
+
+
         // title'ının "ASUS" icerdigini test edin
         String title = Driver.getDriver().getTitle();
         Assert.assertTrue(title.contains("ASUS"));
+
+
         // sayfayı kapatın
         Driver.closeDriver();
     }
