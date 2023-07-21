@@ -9,10 +9,9 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
-public class C02_Raporlama {
+public class C02_Raporlama extends TestBaseRapor{
 
-extends TestBaseRapor {
-
+    /**
         // 'https://www.amazon.com' adresine gidin
         // arama kutusuna "Java" yazip aratın
         // sonuc yazisinin "Java" icerdigini test edin
@@ -21,7 +20,9 @@ extends TestBaseRapor {
         // sonuc yazisinin Kitap icerdigini test edin
         // sayfayı kapatınız
 
-        // test raporu alınız
+     // test raporu alınız
+
+     */
 
         @Test
         public void test01() {
@@ -62,9 +63,5 @@ extends TestBaseRapor {
             Driver.closeDriver();
 
         }
-
-
-
-
 
 }
