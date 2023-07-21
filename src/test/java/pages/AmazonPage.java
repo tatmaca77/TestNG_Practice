@@ -18,9 +18,9 @@ public class AmazonPage {
     @FindBy(xpath = "//select")
     public WebElement ddm;
 
-    // arama motoruna "Asus" yazıp aratın
+    // arama kutusuna "Asus" yazıp aratın
     @FindBy(xpath = "//input[@id='twotabsearchtextbox']")
-    public WebElement aramaMotoru ;
+    public WebElement aramaKutusu ;
 
     // ikinci urunun fotografını cekin
     @FindBy(xpath = "(//img[@class='s-image'])[2]")
