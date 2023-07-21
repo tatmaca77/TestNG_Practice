@@ -16,6 +16,7 @@ import java.time.format.DateTimeFormatter;
 
 public class C01_PageClassKullanimi {
 
+    /**
     // amazon sayfasına gidin
     // dropdown'dan "Computers" optionunu secin
     // arama motoruna "Asus" yazıp aratın
@@ -23,6 +24,7 @@ public class C01_PageClassKullanimi {
     // ikinci urune tıklayın
     // title'ının "ASUS" icerdigini test edin
     // sayfayı kapatın
+     */
     @Test
     public void test01() throws IOException {
         // amazon sayfasına gidin
