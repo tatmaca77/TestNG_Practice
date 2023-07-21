@@ -34,7 +34,7 @@ public class C01_PageClassKullanimi {
         // dropdown'dan "Computers" optionunu secin
         AmazonPage amazonPage = new AmazonPage();
         Select select = new Select(amazonPage.ddm);
-        select.selectByVisibleText("Computers");
+        select.selectByVisibleText("Computer");
 
 
         // arama motoruna "Asus" yazıp aratın

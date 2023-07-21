@@ -12,7 +12,7 @@ public class AmazonPage {
         PageFactory.initElements(Driver.getDriver() , this);
     }
 
-        //C01_PagesClassKullanimi
+        /** C01_PagesClassKullanimi */
 
     // dropdown'dan "Computers" optionunu secin
     @FindBy(xpath = "//select")
@@ -26,14 +26,8 @@ public class AmazonPage {
     @FindBy(xpath = "(//img[@class='s-image'])[2]")
     public WebElement ikinciUrun ;
 
-        //asagidakilerde locate e ihtiyac yok
-        // ikinci urune tıklayın
 
-        // title'ının "ASUS" icerdigini test edin
-
-        // sayfayı kapatın
-
-        //C02_Raporlama
+        /** C02_Raporlama */
 
     // sonuc yazisinin "Java" icerdigini test edin
     @FindBy(xpath = "//div[@class='a-section a-spacing-small a-spacing-top-small']")
