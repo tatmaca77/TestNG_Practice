@@ -34,6 +34,9 @@ public class AmazonPage {
     public WebElement sonucYazisi;
 
 
+    
+
+
 
 }
 
