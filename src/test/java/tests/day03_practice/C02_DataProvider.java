@@ -26,7 +26,7 @@ public class C02_DataProvider {
     public static Object[][] kullaniciListesi() {
 
         Object[][] kullaniciBilgileri = {{"ali@gmail.com", "1234567"},
-                {"totti10@gmail.com", "atatürk654321"},
+                {"totti10@gmail.com", "atatürk654321"},   // Congigrurations.properties icine yanlis email ve passsword ekleyip cagirabiliriz.
                 {"mahmuttuncer15@gmail.com", "9685742"}};
 
         return kullaniciBilgileri;
