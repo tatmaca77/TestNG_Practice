@@ -21,8 +21,8 @@ public class C02_DataProvider {
      */
 
 
-    @Test
-    public void negativeLoginDataProvider() {
+    @Test(dataProvider = "kullaniciListesi")
+    public void negativeLoginDataProvider(String email, String password) {
 
         // https://id.heroku.com/login sayfasına gidin
         Driver.getDriver().get(ConfigReader.getProperty("herokuAppUrl"));
@@ -31,7 +31,8 @@ public class C02_DataProvider {
         // yanlıs email ve yanlıs password giriniz
         // (NOT: birden fazla yanlıs email ve password'u dataProvider kullanarak sırayla deneyin)
         HerokuappPage herokuappPage = new HerokuappPage();
-        herokuappPage.emailBox.sendKeys();
+        herokuappPage.emailBox.sendKeys(email);
+        herokuappPage.passwordBox.sendKeys(password);
 
 
 
