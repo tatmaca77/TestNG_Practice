@@ -1,6 +1,7 @@
 package tests.day03_practice;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.HerokuappPage;
 import utilities.ConfigReader;
@@ -20,6 +21,16 @@ public class C02_DataProvider {
 
     // sayfayı kapatınız
      */
+
+    @DataProvider
+    public static Object[][] kullaniciListesi() {
+
+        Object[][] kullaniciBilgileri = {{"ali@gmail.com", "1234567"},
+                {"totti10@gmail.com", "atatürk654321"},
+                {"mahmuttuncer15@gmail.com", "9685742"}};
+
+        return kullaniciBilgileri;
+    }
 
 
     @Test(dataProvider = "kullaniciListesi")
