@@ -25,9 +25,9 @@ public class C02_DataProvider {
     @DataProvider
     public static Object[][] kullaniciListesi() {
 
-        Object[][] kullaniciBilgileri = {{"ali@gmail.com", "1234567"},
-                {"totti10@gmail.com", "atatürk654321"},   // Congigrurations.properties icine yanlis email ve passsword ekleyip cagirabiliriz.
-                {"mahmuttuncer15@gmail.com", "9685742"}};
+        Object[][] kullaniciBilgileri = {{ConfigReader.getProperty("wrongEmail"), ConfigReader.getProperty("wrongPassword")},
+                {ConfigReader.getProperty("wrongEmail2"), ConfigReader.getProperty("wrongPassword2")},   // Congigrurations.properties icine yanlis email ve passsword ekleyip cagirabiliriz.
+                {ConfigReader.getProperty("wrongEmail3"), ConfigReader.getProperty("wrongPassword3")}};
 
         return kullaniciBilgileri;
     }
