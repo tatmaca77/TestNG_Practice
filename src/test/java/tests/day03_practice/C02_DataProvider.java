@@ -1,5 +1,6 @@
 package tests.day03_practice;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HerokuappPage;
 import utilities.ConfigReader;
@@ -33,6 +34,18 @@ public class C02_DataProvider {
         HerokuappPage herokuappPage = new HerokuappPage();
         herokuappPage.emailBox.sendKeys(email);
         herokuappPage.passwordBox.sendKeys(password);
+
+
+        // login butonuna tıklayınız
+        herokuappPage.loginButton.click();
+
+
+        // "There was a problem with your login." yazisinin gorunur oldugunu test edin
+        Assert.assertTrue(herokuappPage.alertText.isDisplayed());
+
+
+        // sayfayı kapatınız
+        Driver.closeDriver();
 
 
 
